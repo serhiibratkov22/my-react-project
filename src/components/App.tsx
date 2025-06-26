@@ -19,7 +19,7 @@ export default function App() {
         {isOpen ? "Hide message" : "Show message"}
       </button>
 
-      {isOpen && <p>🎉 Surprise! You toggled me.</p>}
+      {isOpen && <p>🎉 Oops! Surprise! You toggled me.</p>}
     </>
   );
 }
