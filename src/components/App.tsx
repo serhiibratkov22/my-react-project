@@ -1,13 +1,33 @@
-// src/components/App.tsx
-
-import Button from "./Button";
+import { useState } from "react";
 
 export default function App() {
+  const [count, setCount] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  const toggleMessage = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <Button variant="primary" text="Login" />
-      <Button variant="secondary" text="Follow" />
+      <button onClick={handleClick}>Clicked: {count}</button>
+      <button onClick={toggleMessage}>
+        {isOpen ? "Hide message" : "Show message"}
+      </button>
+
+      {isOpen && <p>🎉 Surprise! You toggled me.</p>}
     </>
   );
 }
+
+
+  
+   
+    
+  
+  
 
